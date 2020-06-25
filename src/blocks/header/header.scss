@@ -1,0 +1,120 @@
+.header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    &__nav{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        &-burger-btn-wrap{
+            display: flex;
+        }
+
+        &-burger-btn{
+            width: 60px;
+            height: 2px;
+            background: $baseWhiteColor;
+            position: relative;
+            margin-right: 40px;
+            border: none;
+            &:before, &::after{
+                content: '';
+                position: absolute;
+                background: $baseWhiteColor;
+                width: 100%;
+                height: 100%;
+                left: 0;
+            }
+
+            &::before{
+                top: 7px;
+            }
+
+            &::after{
+                bottom: 7px;
+            }
+
+        }
+
+        &-list{
+            display: flex;
+            flex-direction: row;
+
+            li{
+                margin: 0px 20px;
+            }
+        }
+
+        &-link{
+            font-family: $madeOuterSansBold;
+            color: $baseWhiteColor;
+            font-size: 14px;
+            line-height: 18px;
+        }
+    }
+
+    // &__logo{}
+
+    &__right{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        &-link{
+            font-family: $madeOuterSansBold;
+            color: $baseWhiteColor;
+            margin: 0px 31.165px;
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        &-shopingbag{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: 0px 31.165px;
+            position: relative;
+            &-redring-wrap{
+                // display: flex;
+                // flex-direction: row;
+                // justify-content: center;
+                // align-items: center;
+                position: absolute;
+                left: 23px;
+                top: -10px;
+                .header__right-shopingbag-span{
+                    position: absolute;
+                    left: 47%;
+                    top: 43%;
+                    transform: translate(-50%, -50%);
+                    font-family: $madeOuterSansBold;
+                    color: $baseRedColor;
+                    font-size: 12px;
+                    line-height: 15px;
+                }
+            }
+        }
+
+        &-lang{
+            font-family: $madeOuterSansBold;
+            color: $baseWhiteColor;
+            margin-left: 31.165px;
+            font-size: 14px;
+            line-height: 18px;
+
+            &-de{
+                margin-right: 4px;
+                opacity: 0.3;
+            }
+
+            &-en{
+                margin-left: 4px;
+            }
+        }
+    }
+}

@@ -1,0 +1,218 @@
+/* Global styles */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+    License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big,
+cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol,
+ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+button {
+  cursor: pointer; }
+
+.body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #000000;
+  max-width: 1920px;
+  min-width: 320px;
+  margin: 0 auto;
+  position: relative; }
+  .body::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("../img/grunge-texture.png"); }
+
+.body__wrap {
+  position: relative;
+  padding: 54px 60px; }
+
+a {
+  text-decoration: none; }
+
+span {
+  color: #F7F5F9; }
+
+h3, h4 {
+  color: #F7F5F9; }
+
+@font-face {
+  font-family: 'MADE Outer Sans bold';
+  src: local("MADE Outer Sans bold"), url("../fonts/MADE-Outer-Sans-Bold-PERSONAL-USE.otf") format("opentype"); }
+
+@font-face {
+  font-family: 'MADE Outer Sans lighter';
+  src: local("MADE Outer Sans lighter"), url("../fonts/MADE-Outer-Sans-Light-PERSONAL-USE.otf") format("opentype"); }
+
+.header {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center; }
+  .header__nav {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+            align-items: center; }
+    .header__nav-burger-btn-wrap {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: flex; }
+    .header__nav-burger-btn {
+      width: 60px;
+      height: 2px;
+      background: #F7F5F9;
+      position: relative;
+      margin-right: 40px;
+      border: none; }
+      .header__nav-burger-btn:before, .header__nav-burger-btn::after {
+        content: '';
+        position: absolute;
+        background: #F7F5F9;
+        width: 100%;
+        height: 100%;
+        left: 0; }
+      .header__nav-burger-btn::before {
+        top: 7px; }
+      .header__nav-burger-btn::after {
+        bottom: 7px; }
+    .header__nav-list {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+              flex-direction: row; }
+      .header__nav-list li {
+        margin: 0px 20px; }
+    .header__nav-link {
+      font-family: "MADE Outer Sans bold";
+      color: #F7F5F9;
+      font-size: 14px;
+      line-height: 18px; }
+  .header__right {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+            align-items: center; }
+    .header__right-link {
+      font-family: "MADE Outer Sans bold";
+      color: #F7F5F9;
+      margin: 0px 31.165px;
+      font-size: 14px;
+      line-height: 18px; }
+    .header__right-shopingbag {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+              align-items: center;
+      margin: 0px 31.165px;
+      position: relative; }
+      .header__right-shopingbag-redring-wrap {
+        position: absolute;
+        left: 23px;
+        top: -10px; }
+        .header__right-shopingbag-redring-wrap .header__right-shopingbag-span {
+          position: absolute;
+          left: 47%;
+          top: 43%;
+          -webkit-transform: translate(-50%, -50%);
+                  transform: translate(-50%, -50%);
+          font-family: "MADE Outer Sans bold";
+          color: #E50012;
+          font-size: 12px;
+          line-height: 15px; }
+    .header__right-lang {
+      font-family: "MADE Outer Sans bold";
+      color: #F7F5F9;
+      margin-left: 31.165px;
+      font-size: 14px;
+      line-height: 18px; }
+      .header__right-lang-de {
+        margin-right: 4px;
+        opacity: 0.3; }
+      .header__right-lang-en {
+        margin-left: 4px; }
+
+.cardroom {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap; }
+  .cardroom__items {
+    margin: 0px 5px; }
+    .cardroom__items:first-child {
+      margin-left: 0px; }
+    .cardroom__items:last-child {
+      margin-right: 0px; }

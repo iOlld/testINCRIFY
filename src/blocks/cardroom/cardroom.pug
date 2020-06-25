@@ -1,0 +1,18 @@
+section.cardroom
+    mixin cardroom(imgPath, title, description)
+        .cardroom__items
+            img(src=`./img/Img-${imgPath}.jpg`, alt=`./img/Img-${imgPath}.jpg`)
+                
+            h3= title
+
+            h4= description
+
+    +cardroom('1', 'Da Vinci', 'Mystery')
+    +cardroom('2', 'Mission Belvedere', 'Action')
+    +cardroom('3', 'School of magic', 'Adventure')
+    +cardroom('4', 'The Unknown', 'Horror with live actor')
+    +cardroom('5', 'The Nun', 'Horror with live actor')
+
+    //- +cardroom('Hello world')
+    //-     p This is my
+    //-     p Amazing article
