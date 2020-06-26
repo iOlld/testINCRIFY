@@ -13,6 +13,8 @@
 
         &-burger-btn-wrap{
             display: flex;
+            cursor: pointer;
+            padding: 9px 0px;
         }
 
         &-burger-btn{
@@ -79,14 +81,12 @@
             align-items: center;
             margin: 0px 31.165px;
             position: relative;
+
             &-redring-wrap{
-                // display: flex;
-                // flex-direction: row;
-                // justify-content: center;
-                // align-items: center;
                 position: absolute;
                 left: 23px;
                 top: -10px;
+                
                 .header__right-shopingbag-span{
                     position: absolute;
                     left: 47%;

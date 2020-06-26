@@ -1,18 +1,95 @@
 .cardroom{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    margin-top: 62.5px;
+
     &__items{
-        // display: flex;
-        // width: max-content;
         margin: 0px 5px;
+        position: relative;
 
         &:first-child{
             margin-left: 0px;
+            .cardroom__items-text-wrap{
+                justify-content: space-between;
+            }
         }
 
         &:last-child{
             margin-right: 0px;
+        }
+    }
+
+    &__items-text-wrap{
+        position: absolute;
+        bottom: 53px;
+        left: 50%;
+        transform: translate(-50%);
+        width: 57%;
+        min-height: 140px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    &__h4{
+        font-family: $madeOuterSansBold;
+        font-size: 36px;
+        line-height: 36px;
+        color: $baseWhiteColor;
+        text-align: start;
+    }
+
+    &__h5{
+        margin-top: 40px;
+        font-family: $madeOuterSansLighter;
+        font-size: 14px;
+        line-height: 24px;
+        color: $baseWhiteColor;
+        opacity: 0.6;
+    }
+
+    &__mask-wrap{
+        position: absolute;
+        bottom: 53px;
+        right: 75px;
+    }
+
+    &__sale{
+        position: absolute;
+        color: $baseRedColor;
+        top: 27.47px;
+        left: -7px;
+        &-percent{
+            position: absolute;
+            left: 19px;
+            top: 15px;
+            font-family: 'Morganite bold';
+            font-size: 56px;
+            line-height: 56px;
+            text-transform: uppercase;
+        }
+
+        &-time-wrap{
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            top: 20px;
+            right: 20px;
+        }
+
+        &-text{
+            font-family: $madeOuterSansLighter;
+            font-size: 14px;
+            line-height: 24px;
+            color: $baseWhiteColor;
+            opacity: 0.6;
+        }
+
+        &-time{
+            font-family: $madeOuterSansBold;
+            font-size: 18px;
+            line-height: 23px;
+            text-align: right;
         }
     }
 }

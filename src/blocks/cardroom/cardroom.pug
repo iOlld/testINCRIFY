@@ -1,18 +1,30 @@
+mixin cardRoom(imgPath, title, description, mask)
+    .cardroom__items
+        img(src=`./img/Img-${imgPath}.jpg`, alt=`./img/Img-${imgPath}.jpg`)
+        if block
+            block
+        .cardroom__items-text-wrap
+            h4.cardroom__h4= title
+            h5.cardroom__h5= description
+            
+mixin sale
+    .cardroom__sale
+        img(src="./img/for-sale.png", alt="for-sale")
+        span.cardroom__sale-percent|20% off
+        .cardroom__sale-time-wrap
+            span.cardroom__sale-text|Limited-time Deal
+            span.cardroom__sale-time
+
+mixin mask
+    .cardroom__mask-wrap
+        include mask.svg
 section.cardroom
-    mixin cardroom(imgPath, title, description)
-        .cardroom__items
-            img(src=`./img/Img-${imgPath}.jpg`, alt=`./img/Img-${imgPath}.jpg`)
-                
-            h3= title
-
-            h4= description
-
-    +cardroom('1', 'Da Vinci', 'Mystery')
-    +cardroom('2', 'Mission Belvedere', 'Action')
-    +cardroom('3', 'School of magic', 'Adventure')
-    +cardroom('4', 'The Unknown', 'Horror with live actor')
-    +cardroom('5', 'The Nun', 'Horror with live actor')
-
-    //- +cardroom('Hello world')
-    //-     p This is my
-    //-     p Amazing article
+    +cardRoom('1', 'Da Vinci', 'Mystery')
+    +cardRoom('2', 'Mission Belvedere', 'Action')
+    +cardRoom('3', 'School of magic', 'Adventure')
+        +sale
+    +cardRoom('4', 'The Unknown', 'Horror with live actor')
+        +mask
+    +cardRoom('5', 'The Nun', 'Horror with live actor')
+        +mask
+        

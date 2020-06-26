@@ -79,6 +79,10 @@ h3, h4 {
   font-family: 'MADE Outer Sans lighter';
   src: local("MADE Outer Sans lighter"), url("../fonts/MADE-Outer-Sans-Light-PERSONAL-USE.otf") format("opentype"); }
 
+@font-face {
+  font-family: 'Morganite bold';
+  src: local("MADE Outer Sans lighter"), url("../fonts/Morganite-Bold.ttf") format("truetype"); }
+
 .header {
   width: 100%;
   display: -webkit-box;
@@ -110,7 +114,9 @@ h3, h4 {
     .header__nav-burger-btn-wrap {
       display: -webkit-box;
       display: -webkit-flex;
-      display: flex; }
+      display: flex;
+      cursor: pointer;
+      padding: 9px 0px; }
     .header__nav-burger-btn {
       width: 60px;
       height: 2px;
@@ -208,11 +214,85 @@ h3, h4 {
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
           flex-direction: row;
-  -webkit-flex-wrap: wrap;
-          flex-wrap: wrap; }
+  margin-top: 62.5px; }
   .cardroom__items {
-    margin: 0px 5px; }
+    margin: 0px 5px;
+    position: relative; }
     .cardroom__items:first-child {
       margin-left: 0px; }
+      .cardroom__items:first-child .cardroom__items-text-wrap {
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+                justify-content: space-between; }
     .cardroom__items:last-child {
       margin-right: 0px; }
+  .cardroom__items-text-wrap {
+    position: absolute;
+    bottom: 53px;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+    width: 57%;
+    min-height: 140px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+            justify-content: flex-end; }
+  .cardroom__h4 {
+    font-family: "MADE Outer Sans bold";
+    font-size: 36px;
+    line-height: 36px;
+    color: #F7F5F9;
+    text-align: start; }
+  .cardroom__h5 {
+    margin-top: 40px;
+    font-family: "MADE Outer Sans lighter";
+    font-size: 14px;
+    line-height: 24px;
+    color: #F7F5F9;
+    opacity: 0.6; }
+  .cardroom__mask-wrap {
+    position: absolute;
+    bottom: 53px;
+    right: 75px; }
+  .cardroom__sale {
+    position: absolute;
+    color: #E50012;
+    top: 27.47px;
+    left: -7px; }
+    .cardroom__sale-percent {
+      position: absolute;
+      left: 19px;
+      top: 15px;
+      font-family: 'Morganite bold';
+      font-size: 56px;
+      line-height: 56px;
+      text-transform: uppercase; }
+    .cardroom__sale-time-wrap {
+      position: absolute;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+              flex-direction: column;
+      top: 20px;
+      right: 20px; }
+    .cardroom__sale-text {
+      font-family: "MADE Outer Sans lighter";
+      font-size: 14px;
+      line-height: 24px;
+      color: #F7F5F9;
+      opacity: 0.6; }
+    .cardroom__sale-time {
+      font-family: "MADE Outer Sans bold";
+      font-size: 18px;
+      line-height: 23px;
+      text-align: right; }

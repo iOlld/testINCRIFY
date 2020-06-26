@@ -1,14 +1,16 @@
+mixin navLinks(item)
+    li
+        a.header__nav-link(href="#")= item
+
 header.header
     nav.header__nav
         .header__nav-burger-btn-wrap
             button.header__nav-burger-btn
         ul.header__nav-list
-            li
-                a.header__nav-link(href="#")|Rooms
-            li
-                a.header__nav-link(href="#")|Booking
-            li
-                a.header__nav-link(href="#")|Booking
+            +navLinks('Rooms')
+            +navLinks('Booking')
+            +navLinks('Contacts')
+
     .header__logo
         a.header__logo-link(href="index.html")
             include logo.svg
