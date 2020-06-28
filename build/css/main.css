@@ -202,9 +202,11 @@ h3, h4 {
       line-height: 18px; }
       .header__right-lang-de {
         margin-right: 4px;
-        opacity: 0.3; }
+        opacity: 0.3;
+        cursor: pointer; }
       .header__right-lang-en {
-        margin-left: 4px; }
+        margin-left: 4px;
+        cursor: pointer; }
 
 .cardroom {
   display: -webkit-box;
